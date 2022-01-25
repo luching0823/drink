@@ -1,6 +1,4 @@
 import streamlit as st
-import pygsheets
-import gspread
 from oauth2client.service_account import ServiceAccountCredentials as SAC
 from google.oauth2 import service_account
 from googleapiclient.discovery import build
@@ -10,21 +8,6 @@ SCOPE = "https://www.googleapis.com/auth/drinkSheet"
 SPREADSHEET_ID = "1txZGNLtjcwqaHyQBC-CDgEyvg_Ko7JEFVKs3lXpBQ_s"
 SHEET_NAME = "Drink"
 GSHEET_URL = f"https://docs.google.com/spreadsheets/d/{SPREADSHEET_ID}"
-
-# gc = pygsheets.authorize(service_account_file = 'streamlistCre.json')
-# wb_key = gc.open_by_key(SPREADSHEET_ID)
-
-# # 設定 json 檔案路徑及程式操作範圍
-# Json = 'streamlistCre.json'
-# Url = ['https://spreadsheets.google.com/feeds']
-
-# # 連線至資料表
-# Connect = SAC.from_json_keyfile_name(Json, Url)
-# GoogleSheets = gspread.authorize(Connect)
-
-# # 開啟資料表及工作表
-# Sheet = GoogleSheets.open_by_key(SPREADSHEET_ID)
-# Sheets = Sheet.sheet1
 
 # 連到 Google Sheet
 @st.experimental_singleton()
