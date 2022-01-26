@@ -68,11 +68,9 @@ gsheet_connector = connect_to_gsheet()
 setForm = st.form(key="setOptions")
 
 with setForm:
-    cols1, clos2 = st.columns(2)
+    cols1, clos2 = st.columns(1)
     author = cols1.selectbox( "Name", ["Pulin","Coody","Ken","Irene"] )
-    drink = clos2.selectbox(
-        "drink name:", ["紅", "綠", "奶", "烏"]
-    )
+    drink = clos2.selectbox( "drink name:", ["紅", "綠", "奶", "烏"] )
     comment = st.text_area("Comment:")
     submitted = st.form_submit_button(label="Submit")
 
