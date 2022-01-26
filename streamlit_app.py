@@ -69,7 +69,7 @@ setForm = st.form(key="setOptions")
 
 with setForm:
     cols = st.columns((1, 1))
-    author = cols[0].text_input("Report author:")
+    author = cols[0].selectbox( "Name", ["Pulin","Coody","Ken","Irene"] )
     bug_type = cols[1].selectbox(
         "drink name:", ["紅", "綠", "奶", "烏"], index=2
     )
