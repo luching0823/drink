@@ -68,19 +68,18 @@ gsheet_connector = connect_to_gsheet()
 setForm = st.form(key="setOptions")
 
 with setForm:
-    cols = st.columns((1, 1))
-    author = cols[0].selectbox( "Name", ["Pulin","Coody","Ken","Irene"] )
-    bug_type = cols[1].selectbox(
+    cols = st.columns(2)
+    author = cols.selectbox( "Name", ["Pulin","Coody","Ken","Irene"] )
+    drink = cols.selectbox(
         "drink name:", ["紅", "綠", "奶", "烏"], index=2
     )
-    comment = st.text_area("Comment:")
-    cols = st.columns(2)
+    comment = cols.text_area("Comment:")
     submitted = st.form_submit_button(label="Submit")
 
 
 if submitted:
     add_row_to_gsheet(
-        gsheet_connector, [[author, bug_type, comment]]
+        gsheet_connector, [[author, drink, comment]]
     )
     # 綠色提示框
     st.success("Thanks! Your bug was recorded.")
