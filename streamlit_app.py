@@ -71,7 +71,7 @@ with setForm:
     cols1, clos2 = st.columns(2)
     author = cols1.selectbox( "Name", ["Pulin","Coody","Ken","Irene"] )
     drink = clos2.selectbox(
-        "drink name:", ["紅", "綠", "奶", "烏"], index=2
+        "drink name:", ["紅", "綠", "奶", "烏"]
     )
     comment = st.text_area("Comment:")
     submitted = st.form_submit_button(label="Submit")
