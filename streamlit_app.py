@@ -3,7 +3,7 @@ from google.oauth2 import service_account
 from googleapiclient.discovery import build
 import pandas as pd
 
-SCOPE = "https://www.googleapis.com/auth/drinkSheet"
+SCOPE = "https://www.googleapis.com/auth/spreadsheets"
 SPREADSHEET_ID = "1txZGNLtjcwqaHyQBC-CDgEyvg_Ko7JEFVKs3lXpBQ_s"
 SHEET_NAME = "Drink"
 GSHEET_URL = f"https://docs.google.com/spreadsheets/d/{SPREADSHEET_ID}"
